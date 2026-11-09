@@ -98,19 +98,3 @@ validam SSRF/DNS-rebinding. As skills mandam usá-los em vez de
   sob a mesma licença MIT, com base em claude-seo v2.5.0.
 - Contribuições ao claude-seo: Lutfiya Miller, Chris Muller, Florian Schmitz,
   Dan Colta e Matej Marjanovic (v1.9.0).
-
-## Atualizando a partir do upstream
-
-Quando sair nova versão do claude-seo, refazer o port:
-
-1. Copiar `skills/ agents/ hooks/ scripts/ schema/ data/` e os arquivos de
-   runtime do repo novo.
-2. Substituir todas as ocorrências de `"${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo"`
-   por `qoder-seo` nos `.md`; referências restantes de `${CLAUDE_PLUGIN_ROOT}`
-   viram `${QODER_PLUGIN_ROOT}`.
-3. Remover linhas `model:` do frontmatter dos agents; conferir
-   `scripts/runtime.py` (paths `.qoder-plugin`, `QODER_PLUGIN_*`, dados em
-   `qoder-seo`) e a forma canônica em `scripts/consistency_check.py`.
-4. Validar com `node --check`, `python -m py_compile`, `qoder-seo doctor` e
-   `qoder-seo run portability_check.py`; bumpar `version` no manifesto e gerar
-   o ZIP de release.
