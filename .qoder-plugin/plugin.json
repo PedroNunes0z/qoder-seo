@@ -1,0 +1,27 @@
+{
+  "name": "qoder-seo",
+  "version": "2.5.0",
+  "description": "Comprehensive SEO analysis plugin for Qoder. 26 skills and 19 subagents cover technical SEO, content quality, schema, sitemaps, Core Web Vitals, local SEO, backlinks, AI/GEO, ecommerce, hreflang, SXO, clustering, drift monitoring and Google APIs, backed by 60 bundled Python tools with SSRF-safe fetchers.",
+  "author": {
+    "name": "Pedro Nunes (qoder-seo v1.0.0), Qoder port"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/PedroNunes0z/qoder-seo",
+  "repository": "https://github.com/PedroNunes0z/qoder-seo",
+  "keywords": [
+    "qoder-plugin",
+    "seo",
+    "technical-seo",
+    "content-quality",
+    "e-e-a-t",
+    "schema-markup",
+    "core-web-vitals",
+    "local-seo",
+    "geo",
+    "ai-search",
+    "sitemap",
+    "backlinks",
+    "hreflang",
+    "google-search-console"
+  ]
+}

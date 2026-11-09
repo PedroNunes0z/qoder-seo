@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# PATH entry point for the bundled Python tools. Qoder adds this plugin's bin/
+# directory to the session shell PATH, so skills call `qoder-seo run <script>`
+# without knowing the install directory. The real launcher and runtime.py live
+# in scripts/ (kept from the upstream claude-seo layout).
+here="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+exec "${here}/../scripts/claude-seo" "$@"

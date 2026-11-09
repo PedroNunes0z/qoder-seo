@@ -1,0 +1,34 @@
+{
+  "description": "qoder-seo: plugin root announcement on SessionStart and JSON-LD schema validation after Edit/Write",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${QODER_PLUGIN_ROOT}/hooks/resolve-root.js"],
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": [
+              "${QODER_PLUGIN_ROOT}/hooks/run-python-hook.js",
+              "${QODER_PLUGIN_ROOT}/hooks/validate-schema.py",
+              "${tool_input.file_path}"
+            ],
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
