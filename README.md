@@ -67,8 +67,8 @@ minutos). O ambiente fica em `%LOCALAPPDATA%\qoder-seo` (Windows),
 | Hook `PostToolUse` de validação de schema | mantido; `run-python-hook.js` agora também lê `tool_input.file_path` do payload stdin, caso o placeholder `${tool_input.*}` não seja expandido |
 | — | novo hook `SessionStart` (`hooks/resolve-root.js`) anuncia o diretório raiz do plugin para resolver referências de arquivo `${QODER_PLUGIN_ROOT}/...` |
 | `runtime.py` | reconhece `QODER_PLUGIN_ROOT`/`QODER_PLUGIN_DATA` e `.qoder-plugin/plugin.json`; dados em `.../qoder-seo` |
-| `install.sh`/`install.ps1`, `CLAUDE.md`, `tests/`, `docs/`, `screenshots/` | omitidos (instalação é pelo Qoder; documentação de desenvolvimento não é necessária em runtime) |
-| `extensions/` (9 instaladores de MCP no formato Claude) | omitidos; configuração documentada em `CONNECTORS.md` |
+| `install.sh`/`install.ps1` (raiz), `CLAUDE.md`, `tests/`, `screenshots/`, `.github/` | omitidos (instalação é pelo Qoder; documentação de desenvolvimento não é necessária em runtime) |
+| `extensions/` e `docs/` | incluídos como referência. O Qoder só carrega automaticamente os `skills/` de nível superior; os 7 skills extras em `extensions/*/skills/` ficam disponíveis como documentação que o agente pode ler sob demanda, e os instaladores `install.sh`/`install.ps1` são específicos do Claude Code (não usados aqui). Configuração das integrações em `CONNECTORS.md`. |
 
 Referências a "Claude SEO" no texto dos skills são proveniência do upstream;
 comandos, caminhos e variáveis citados nas skills foram verificados para o
@@ -79,6 +79,9 @@ Qoder. Nada foi revalidado contra a API do Google/Firecrawl neste port.
 - Node.js (hooks e extensões MCP) e Python 3.11–3.14.
 - Playwright é instalado no venv; o download do Chromium ocorre sob demanda
   nos fluxos de renderização SPA (`render_page.py --mode always/auto`).
+- No Windows, a exportação **PDF** do `google_report.py` exige as libs
+  nativas GTK/Pango (o `weasyprint` de pip não as inclui); os formatos
+  HTML/XLSX funcionam sem nada extra e o erro é reportado de forma graciosa.
 - APIs externas exigem credenciais suas: Google Search Console/PageSpeed/GA4
   (veja `skills/seo-google/references/auth-setup.md`), DataForSEO, Moz,
   Bing Webmaster etc. As extensões opcionais estão em `CONNECTORS.md`.

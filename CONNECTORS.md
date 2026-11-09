@@ -1,7 +1,10 @@
 # Extensões opcionais (conectores)
 
 O claude-seo original empacotava 9 "extensões" com instaladores que escreviam
-servidores MCP/configurações em `~/.claude`. No Qoder, as integrações
+servidores MCP/configurações em `~/.claude`. Os payloads das extensões
+(skills extras, references e docs de setup em `extensions/*/docs/*-SETUP.md`)
+estão incluídos neste pacote como referência; os instaladores `install.sh`
+são específicos do Claude Code e não são usados no Qoder. As integrações
 opcionais não são pré-configuradas (exigem suas chaves de API). Adicione o
 que precisar nas configurações de MCP do Qoder, ou use diretamente as
 ferramentas Python dos scripts (que leem variáveis de ambiente) — a maioria

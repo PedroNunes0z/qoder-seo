@@ -5,3 +5,4 @@ runtime-state.json
 .DS_Store
 Thumbs.db
 *.zip
+ms-playwright/
