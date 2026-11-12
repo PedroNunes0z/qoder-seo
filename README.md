@@ -2,10 +2,13 @@
 
 [![Linguagem principal](https://img.shields.io/github/languages/top/PedroNunes0z/qoder-seo)](https://github.com/PedroNunes0z/qoder-seo)
 [![Linguagens](https://img.shields.io/github/languages/count/PedroNunes0z/qoder-seo)](https://github.com/PedroNunes0z/qoder-seo)
-[![Licença MIT](https://img.shields.io/github/license/PedroNunes0z/qoder-seo)](LICENSE)
-[![Última release](https://img.shields.io/github/v/release/PedroNunes0z/qoder-seo?label=release)](https://github.com/PedroNunes0z/qoder-seo/releases/latest)
-[![Python 3.11–3.14](https://img.shields.io/badge/Python-3.11%E2%80%933.14-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-required-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Stars](https://img.shields.io/github/stars/PedroNunes0z/qoder-seo?style=for-the-badge&logo=github&label=stars)](https://github.com/PedroNunes0z/qoder-seo/stargazers)
+[![Forks](https://img.shields.io/github/forks/PedroNunes0z/qoder-seo?style=for-the-badge&logo=github&label=forks)](https://github.com/PedroNunes0z/qoder-seo/network/members)
+[![Issues](https://img.shields.io/github/issues/PedroNunes0z/qoder-seo?style=for-the-badge&logo=github&label=issues)](https://github.com/PedroNunes0z/qoder-seo/issues)
+[![Último commit](https://img.shields.io/github/last-commit/PedroNunes0z/qoder-seo?style=for-the-badge&logo=git&label=last%20commit)](https://github.com/PedroNunes0z/qoder-seo/commits/main)
+[![Licença MIT](https://img.shields.io/github/license/PedroNunes0z/qoder-seo?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
+[![Python 3.11–3.14](https://img.shields.io/badge/Python-3.11%E2%80%933.14-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-required-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 
 Port do plugin [claude-seo v2.5.0](https://github.com/AgriciDaniel/claude-seo)
 (MIT, por [@AgriciDaniel](https://github.com/AgriciDaniel)) para Qoder,
@@ -75,7 +78,7 @@ minutos). O ambiente fica em `%LOCALAPPDATA%\qoder-seo` (Windows),
 | — | novo hook `SessionStart` (`hooks/resolve-root.js`) anuncia o diretório raiz do plugin para resolver referências de arquivo `${QODER_PLUGIN_ROOT}/...` |
 | `runtime.py` | reconhece `QODER_PLUGIN_ROOT`/`QODER_PLUGIN_DATA` e `.qoder-plugin/plugin.json`; dados em `.../qoder-seo` |
 | `install.sh`/`install.ps1` (raiz), `CLAUDE.md`, `tests/`, `screenshots/`, `.github/` | omitidos (instalação é pelo Qoder; documentação de desenvolvimento não é necessária em runtime) |
-| `extensions/` e `docs/` | incluídos como referência. O Qoder só carrega automaticamente os `skills/` de nível superior; os 7 skills extras em `extensions/*/skills/` ficam disponíveis como documentação de referência. |
+| `extensions/` e `docs/` | incluídos como referência. O Qoder só carrega automaticamente os `skills/` de nível superior; os 7 skills extras em `extensions/*/skills/` ficam disponíveis como documentação e extensão. |
 
 Referências a "Claude SEO" no texto dos skills são proveniência do upstream;
 comandos, caminhos e variáveis citados nas skills foram verificados para o
