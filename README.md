@@ -1,5 +1,12 @@
 # qoder-seo - SEO completo para Qoder
 
+[![Linguagem principal](https://img.shields.io/github/languages/top/PedroNunes0z/qoder-seo)](https://github.com/PedroNunes0z/qoder-seo)
+[![Linguagens](https://img.shields.io/github/languages/count/PedroNunes0z/qoder-seo)](https://github.com/PedroNunes0z/qoder-seo)
+[![Licença MIT](https://img.shields.io/github/license/PedroNunes0z/qoder-seo)](LICENSE)
+[![Última release](https://img.shields.io/github/v/release/PedroNunes0z/qoder-seo?label=release)](https://github.com/PedroNunes0z/qoder-seo/releases/latest)
+[![Python 3.11–3.14](https://img.shields.io/badge/Python-3.11%E2%80%933.14-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-required-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+
 Port do plugin [claude-seo v2.5.0](https://github.com/AgriciDaniel/claude-seo)
 (MIT, por [@AgriciDaniel](https://github.com/AgriciDaniel)) para Qoder,
 mantido por **Pedro Nunes** ([github.com/PedroNunes0z/qoder-seo](https://github.com/PedroNunes0z/qoder-seo)).
@@ -68,7 +75,7 @@ minutos). O ambiente fica em `%LOCALAPPDATA%\qoder-seo` (Windows),
 | — | novo hook `SessionStart` (`hooks/resolve-root.js`) anuncia o diretório raiz do plugin para resolver referências de arquivo `${QODER_PLUGIN_ROOT}/...` |
 | `runtime.py` | reconhece `QODER_PLUGIN_ROOT`/`QODER_PLUGIN_DATA` e `.qoder-plugin/plugin.json`; dados em `.../qoder-seo` |
 | `install.sh`/`install.ps1` (raiz), `CLAUDE.md`, `tests/`, `screenshots/`, `.github/` | omitidos (instalação é pelo Qoder; documentação de desenvolvimento não é necessária em runtime) |
-| `extensions/` e `docs/` | incluídos como referência. O Qoder só carrega automaticamente os `skills/` de nível superior; os 7 skills extras em `extensions/*/skills/` ficam disponíveis como documentação que o agente pode ler sob demanda, e os instaladores `install.sh`/`install.ps1` são específicos do Claude Code (não usados aqui). Configuração das integrações em `CONNECTORS.md`. |
+| `extensions/` e `docs/` | incluídos como referência. O Qoder só carrega automaticamente os `skills/` de nível superior; os 7 skills extras em `extensions/*/skills/` ficam disponíveis como documentação de referência. |
 
 Referências a "Claude SEO" no texto dos skills são proveniência do upstream;
 comandos, caminhos e variáveis citados nas skills foram verificados para o
