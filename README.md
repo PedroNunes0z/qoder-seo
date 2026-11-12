@@ -1,4 +1,4 @@
-# qoder-seo — SEO completo para Qoder
+# qoder-seo - SEO completo para Qoder
 
 Port do plugin [claude-seo v2.5.0](https://github.com/AgriciDaniel/claude-seo)
 (MIT, por [@AgriciDaniel](https://github.com/AgriciDaniel)) para Qoder,
